@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int n,d,prod=1;
+    printf("Enter a number");
+    scanf("%d",&n);
+    while(n>0)
+    {  d=n%10; // To find digits
+      prod=prod*d; //For calculating product of digits
+      n=n/10;
+    }
+    printf("Product of digits is = %d",prod);
+    return 0;
+}
