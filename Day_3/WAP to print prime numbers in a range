@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+int main ()
+{ int i,j,lower,upper,prime;
+    printf("Enter lower bound\t");
+    scanf("%d",&lower);
+    printf("Enter upper bound\t");
+    scanf("%d",&upper);
+    printf("Prime numbers between %d and %d are:\n",lower,upper);
+    for (i=lower; i<=upper; i++){
+    { if(i<2)
+       continue;
+    }
+
+    prime=1;
+
+    for(j=2;j<=sqrt(i);j++)
+    {
+        if(i%j==0)
+        {
+            prime=0;
+            break;
+        }
+    }
+    if(prime==1)
+    {
+        printf("%d\t",i);
+    }
+    }
+    return 0;
+}
