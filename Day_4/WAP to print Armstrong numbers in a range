@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{int i,lower,upper,n,sum,d;
+   printf("Enter lower bound\t");
+    scanf("%d",&lower);
+    printf("Enter upper bound\t");
+    scanf("%d",&upper);
+    printf("Armstrong numbers between %d and %d are:\n",lower,upper);
+    for(i=lower;i<=upper;i++)
+      {  n=i;
+        sum=0;
+        while(n>0)
+    {  d=n%10;
+      sum=sum+d*d*d;
+      n=n/10;
+    }
+    if(sum==i)
+    printf("%d\t",i);
+    }
+
+    return 0; 
+    }
