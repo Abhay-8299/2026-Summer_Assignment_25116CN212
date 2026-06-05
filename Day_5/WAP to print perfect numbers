@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() 
+{
+    int n, i, j, sum;
+
+    printf("Enter the upper limit: ");
+    scanf("%d", &n);
+
+    printf("Perfect numbers up to %d are: ", n);
+
+    for (i = 1; i <= n; i++) 
+{
+        sum = 0;
+        // Check for proper divisor
+        for (j = 1; j < i; j++) 
+{
+            if (i % j == 0) {
+                sum =sum+j;
+            }
+        }
+        // If sum of divisors equals the number, it is perfect number
+        if (sum == i) 
+{
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+
+    return 0;
+}   
