@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int factorial(int n) 
+{
+    int fact = 1;
+    for (int i = 1; i <= n; i++) {
+        fact =fact*i;
+    }
+    return fact;
+}
+
+int main() {
+    int n, num, temp, digit, sum;
+
+    printf("Enter the upper limit : ");
+    scanf("%d", &n);
+
+    printf("Strong numbers between 1 and %d are:\n", n);
+
+    for (num = 1; num <= n; num++) {
+        temp = num;
+        sum = 0;
+
+        // Calculate sum of factorials of digits
+        while (temp > 0) 
+        {
+            digit = temp % 10;
+            sum =sum+factorial(digit);
+            temp =temp/10;
+        }
+
+        // Check if sum equals the original number
+        if (sum == num) {
+            printf("%d ", num);
+        }
+    }
+    printf("\n");
+
+    return 0;
+}   
